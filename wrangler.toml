@@ -1,0 +1,14 @@
+name = "subscribe-worker"
+main = "index.js"
+compatibility_date = "2024-01-01"
+
+[vars]
+# Override in Cloudflare dashboard → Workers & Pages → subscribe-worker → Settings → Variables
+GITHUB_TOKEN = "placeholder"
+
+routes = [
+  { pattern = "subscribe.devmini.space", zone_name = "devmini.space" }
+]
+
+# Free tier settings
+ compatibility_flags = [ "nodejs_compat" ]
